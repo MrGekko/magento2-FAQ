@@ -2,31 +2,15 @@
 
 /**
  * MagePrince
- * Copyright (C) 2018 Mageprince
+ * Copyright (C) 2020 Mageprince <info@mageprince.com>
  *
- * NOTICE OF LICENSE
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html
- *
- * @category MagePrince
- * @package Prince_Faq
- * @copyright Copyright (c) 2018 MagePrince
+ * @package Mageprince_Faq
+ * @copyright Copyright (c) 2020 Mageprince (http://www.mageprince.com/)
  * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
- * @author MagePrince
+ * @author MagePrince <info@mageprince.com>
  */
 
-namespace Prince\Faq\Api\Data;
+namespace Mageprince\Faq\Api\Data;
 
 interface FaqGroupInterface
 {
@@ -49,7 +33,7 @@ interface FaqGroupInterface
     /**
      * Set faqgroup_id
      * @param string $faqgroup_id
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     
     public function setFaqgroupId($faqgroupId);
@@ -64,7 +48,7 @@ interface FaqGroupInterface
     /**
      * Set groupname
      * @param string $groupname
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     
     public function setGroupname($groupname);
@@ -79,7 +63,7 @@ interface FaqGroupInterface
     /**
      * Set groupcode
      * @param string $groupcode
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     
     public function setGroupcode($groupcode);
@@ -94,7 +78,7 @@ interface FaqGroupInterface
     /**
      * Set icon
      * @param string $icon
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     
     public function setIcon($icon);
@@ -109,7 +93,7 @@ interface FaqGroupInterface
     /**
      * Set width
      * @param string $width
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     
     public function setWidth($width);
@@ -124,7 +108,7 @@ interface FaqGroupInterface
     /**
      * Set faqids
      * @param string $faqids
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     
     public function setFaqids($faqids);
@@ -139,7 +123,7 @@ interface FaqGroupInterface
     /**
      * Set status
      * @param string $status
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     
     public function setStatus($status);

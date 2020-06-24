@@ -2,33 +2,17 @@
 
 /**
  * MagePrince
- * Copyright (C) 2018 Mageprince
+ * Copyright (C) 2020 Mageprince <info@mageprince.com>
  *
- * NOTICE OF LICENSE
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html
- *
- * @category MagePrince
- * @package Prince_Faq
- * @copyright Copyright (c) 2018 MagePrince
+ * @package Mageprince_Faq
+ * @copyright Copyright (c) 2020 Mageprince (http://www.mageprince.com/)
  * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
- * @author MagePrince
+ * @author MagePrince <info@mageprince.com>
  */
 
-namespace Prince\Faq\Model;
+namespace Mageprince\Faq\Model;
 
-use Prince\Faq\Api\Data\FaqGroupInterface;
+use Mageprince\Faq\Api\Data\FaqGroupInterface;
 
 class FaqGroup extends \Magento\Framework\Model\AbstractModel implements FaqGroupInterface
 {
@@ -38,7 +22,7 @@ class FaqGroup extends \Magento\Framework\Model\AbstractModel implements FaqGrou
      */
     public function _construct()
     {
-        $this->_init('Prince\Faq\Model\ResourceModel\FaqGroup');
+        $this->_init('Mageprince\Faq\Model\ResourceModel\FaqGroup');
     }
 
     /**
@@ -53,7 +37,7 @@ class FaqGroup extends \Magento\Framework\Model\AbstractModel implements FaqGrou
     /**
      * Set faqgroup_id
      * @param string $faqgroupId
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     public function setFaqgroupId($faqgroupId)
     {
@@ -72,7 +56,7 @@ class FaqGroup extends \Magento\Framework\Model\AbstractModel implements FaqGrou
     /**
      * Set groupname
      * @param string $groupname
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     public function setGroupname($groupname)
     {
@@ -91,7 +75,7 @@ class FaqGroup extends \Magento\Framework\Model\AbstractModel implements FaqGrou
     /**
      * Set groupcode
      * @param string $groupcode
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     public function setGroupcode($groupcode)
     {
@@ -110,7 +94,7 @@ class FaqGroup extends \Magento\Framework\Model\AbstractModel implements FaqGrou
     /**
      * Set icon
      * @param string $icon
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     public function setIcon($icon)
     {
@@ -129,7 +113,7 @@ class FaqGroup extends \Magento\Framework\Model\AbstractModel implements FaqGrou
     /**
      * Set width
      * @param string $width
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     public function setWidth($width)
     {
@@ -148,7 +132,7 @@ class FaqGroup extends \Magento\Framework\Model\AbstractModel implements FaqGrou
     /**
      * Set faqids
      * @param string $faqids
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     public function setFaqids($faqids)
     {
@@ -167,7 +151,7 @@ class FaqGroup extends \Magento\Framework\Model\AbstractModel implements FaqGrou
     /**
      * Set status
      * @param string $status
-     * @return \Prince\Faq\Api\Data\FaqGroupInterface
+     * @return \Mageprince\Faq\Api\Data\FaqGroupInterface
      */
     public function setStatus($status)
     {

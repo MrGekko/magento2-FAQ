@@ -2,31 +2,15 @@
 
 /**
  * MagePrince
- * Copyright (C) 2018 Mageprince
+ * Copyright (C) 2020 Mageprince <info@mageprince.com>
  *
- * NOTICE OF LICENSE
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html
- *
- * @category MagePrince
- * @package Prince_Faq
- * @copyright Copyright (c) 2018 MagePrince
+ * @package Mageprince_Faq
+ * @copyright Copyright (c) 2020 Mageprince (http://www.mageprince.com/)
  * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
- * @author MagePrince
+ * @author MagePrince <info@mageprince.com>
  */
 
-namespace Prince\Faq\Controller\Adminhtml\FaqGroup;
+namespace Mageprince\Faq\Controller\Adminhtml\FaqGroup;
 
 use Magento\Framework\Controller\ResultFactory;
 
@@ -38,17 +22,17 @@ class Upload extends \Magento\Backend\App\Action
     /**
      * Image uploader
      *
-     * @var \Prince\Faq\Model\ImageUploader
+     * @var \Mageprince\Faq\Model\ImageUploader
      */
     public $imageUploader;
 
     /**
      * @param \Magento\Backend\App\Action\Context $context
-     * @param \Prince\Faq\Model\ImageUploader $imageUploader
+     * @param \Mageprince\Faq\Model\ImageUploader $imageUploader
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
-        \Prince\Faq\Model\ImageUploader $imageUploader
+        \Mageprince\Faq\Model\ImageUploader $imageUploader
     ) {
         parent::__construct($context);
         $this->imageUploader = $imageUploader;
@@ -61,7 +45,7 @@ class Upload extends \Magento\Backend\App\Action
      */
     public function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Prince_Faq::Faq');
+        return $this->_authorization->isAllowed('Mageprince_Faq::Faq');
     }
 
     /**

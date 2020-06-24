@@ -2,31 +2,15 @@
 
 /**
  * MagePrince
- * Copyright (C) 2018 Mageprince
+ * Copyright (C) 2020 Mageprince <info@mageprince.com>
  *
- * NOTICE OF LICENSE
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html
- *
- * @category MagePrince
- * @package Prince_Faq
- * @copyright Copyright (c) 2018 MagePrince
+ * @package Mageprince_Faq
+ * @copyright Copyright (c) 2020 Mageprince (http://www.mageprince.com/)
  * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
- * @author MagePrince
+ * @author MagePrince <info@mageprince.com>
  */
 
-namespace Prince\Faq\Controller\Adminhtml\Faq;
+namespace Mageprince\Faq\Controller\Adminhtml\Faq;
 
 class MassDelete extends \Magento\Backend\App\Action
 {
@@ -34,21 +18,35 @@ class MassDelete extends \Magento\Backend\App\Action
     /**
      * @var \Magento\Ui\Component\MassAction\Filter $filter
      */
-    private $filter;
+    protected $filter;
 
     /**
-     * @var \Prince\Faq\Model\ResourceModel\Faq\CollectionFactory
+     * @var \Mageprince\Faq\Model\ResourceModel\Faq\CollectionFactory
      */
-    private $collectionFactory;
-    
+    protected $collectionFactory;
+
+    /**
+     * MassDelete constructor.
+     * @param \Magento\Ui\Component\MassAction\Filter $filter
+     * @param \Mageprince\Faq\Model\ResourceModel\Faq\CollectionFactory $collectionFactory
+     * @param \Magento\Backend\App\Action\Context $context
+     */
     public function __construct(
         \Magento\Ui\Component\MassAction\Filter $filter,
-        \Prince\Faq\Model\ResourceModel\Faq\CollectionFactory $collectionFactory,
+        \Mageprince\Faq\Model\ResourceModel\Faq\CollectionFactory $collectionFactory,
         \Magento\Backend\App\Action\Context $context
     ) {
         $this->filter            = $filter;
         $this->collectionFactory = $collectionFactory;
         parent::__construct($context);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('Mageprince_Faq::Faq');
     }
 
     public function execute()
@@ -65,6 +63,6 @@ class MassDelete extends \Magento\Backend\App\Action
             $this->messageManager->addError($e->getMessage());
         }
         $resultRedirect = $this->resultRedirectFactory->create();
-        return $resultRedirect->setPath('prince_faq/faq');
+        return $resultRedirect->setPath('mageprince_faq/faq');
     }
 }

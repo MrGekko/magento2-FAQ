@@ -1,14 +1,32 @@
 <?xml version="1.0" ?>
+<!--
+/**
+ * MagePrince
+ * Copyright (C) 2020 Mageprince <info@mageprince.com>
+ *
+ * @package Mageprince_Faq
+ * @copyright Copyright (c) 2020 Mageprince (http://www.mageprince.com/)
+ * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+ * @author MagePrince <info@mageprince.com>
+ */
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <faqtab>
             <general>
                 <enable>1</enable>
-                <showgrouptitle>1</showgrouptitle>
+                <page_title>FAQ</page_title>
+            </general>
+            <seo>
+                <faq_url>faq</faq_url>
+            </seo>
+            <design>
+                <page_type>scroll</page_type>
                 <showgroup>1</showgroup>
+                <showgrouptitle>1</showgrouptitle>
                 <footerlink>1</footerlink>
                 <headerlink>1</headerlink>
-            </general>
+            </design>
         </faqtab>
     </default>
 </config>

@@ -1,8 +1,39 @@
 <?xml version="1.0" ?>
+<!--
+/**
+ * MagePrince
+ * Copyright (C) 2020 Mageprince <info@mageprince.com>
+ *
+ * @package Mageprince_Faq
+ * @copyright Copyright (c) 2020 Mageprince (http://www.mageprince.com/)
+ * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+ * @author MagePrince <info@mageprince.com>
+ */
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
 	<menu>
-		<add id="Prince::top_level" module="Prince_Faq" resource="Prince_Faq::Faq" sortOrder="11" title="FAQ" parent="Magento_Backend::content"/>
-		<add action="prince_faq/faqgroup/index" id="Prince::prince_faqgroup" module="Prince_Faq" parent="Prince::top_level" resource="Prince_Forcelogin::forcelogin" sortOrder="20" title="Groups"/>
-		<add action="prince_faq/faq/index" id="Prince::prince_faq" module="Prince_Faq" parent="Prince::top_level" resource="Prince_Faq::Faq" sortOrder="10" title="FAQ"/>
+		<add id="Mageprince_Faq::menu"
+			 module="Mageprince_Faq"
+			 resource="Mageprince_Faq::menu"
+			 parent="Magento_Backend::content"
+			 sortOrder="11"
+			 translate="title"
+			 title="FAQ"/>
+		<add id="Mageprince_Faq::faqgroup"
+			 action="mageprince_faq/faqgroup/index"
+			 module="Mageprince_Faq"
+			 parent="Mageprince_Faq::menu"
+			 resource="Mageprince_Faq::FaqGroup"
+			 sortOrder="10"
+			 translate="title"
+			 title="Groups"/>
+		<add id="Mageprince_Faq::faq"
+			 action="mageprince_faq/faq/index"
+			 module="Mageprince_Faq"
+			 parent="Mageprince_Faq::menu"
+			 resource="Mageprince_Faq::Faq"
+			 sortOrder="20"
+			 translate="title"
+			 title="FAQ"/>
 	</menu>
 </config>
